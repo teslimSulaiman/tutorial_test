@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <GoldenScent_SplitOrder>
+            <version>0.0.2</version>
+        </GoldenScent_SplitOrder>
+    </modules>
+    <global>
+        <models>
+            <goldenscent>
+                <class>GoldenScent_SplitOrder_Model</class>
+            </goldenscent>
+        </models>
+        <blocks>
+            <adminhtml>
+             <rewrite>
+                <sales_order_grid>GoldenScent_SplitOrder_Block_Sales_Order_Grid</sales_order_grid>
+             </rewrite>
+            </adminhtml>
+        </blocks>
+        <events>
+            <checkout_submit_all_after>
+                <observers>
+                    <goldenscent>
+                        <class>GoldenScent_SplitOrder_Model_Observer</class>
+                        <method>SplitOrder</method>
+                    </goldenscent>
+                </observers>
+            </checkout_submit_all_after>
+        </events>
+    </global>
+</config>

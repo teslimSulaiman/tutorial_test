@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <GoldenScent_SplitOrder>
+            <active>true</active>
+            <codePool>local</codePool>
+        </GoldenScent_SplitOrder>
+    </modules>
+</config>
